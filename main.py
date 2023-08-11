@@ -1,4 +1,5 @@
 from send import send_tasks_to_your_email
+from connect import task_collection
 from dotenv import load_dotenv
 import os
 
@@ -9,6 +10,7 @@ email_password = os.getenv('MY_PASSWORD')
 
 def add_task(task):
     tasks.append(task)
+    task_collection.insert_one({'task': task})
     print("Task added:", task)
 def show_tasks():
     print("Current Tasks:")

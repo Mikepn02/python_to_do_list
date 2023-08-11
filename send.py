@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 import ssl
 import smtplib
 
+
 load_dotenv()
 import os
 
